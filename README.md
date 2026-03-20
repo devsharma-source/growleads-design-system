@@ -44,6 +44,7 @@ The AI will read the spec files and build UI matching the Growleads style automa
 | **`components.md`** | Exact CSS for buttons, inputs, cards, tables, badges, toggles, charts | Reference when building components |
 | **`layout.md`** | Sidebar + main content structure, spacing scale, breakpoints | Reference when structuring pages |
 | **`reference.css`** | Complete production CSS (everything above, ready to use) | Starting point for new projects |
+| **`favicon.png`** | Growleads logo (blue rounded square with "G" + arrow) | Favicon, sidebar brand, app icon |
 
 ## Color Palette
 
@@ -136,6 +137,41 @@ Read all files in the growleads-design-system folder.
 Use tokens.css for variables, components.md for component specs,
 and layout.md for page structure. Build [describe what you need].
 ```
+
+## Branding / Logo
+
+The `favicon.png` is the official Growleads logo — a blue rounded-square with a white "G" and a top-right arrow motif.
+
+**Usage in HTML:**
+```html
+<link rel="icon" type="image/png" href="/favicon.png">
+```
+
+**Sidebar brand (SVG recreation):**
+```html
+<svg viewBox="0 0 40 40" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ibg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A84FF"/>
+      <stop offset="100%" style="stop-color:#5E5CE6"/>
+    </linearGradient>
+    <linearGradient id="iarr" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#30D158"/>
+      <stop offset="100%" style="stop-color:#64D2FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="9" fill="url(#ibg)"/>
+  <text x="20" y="30" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="26" font-weight="700" fill="white">G</text>
+  <path d="M 27 8 L 33 8 L 33 14" stroke="url(#iarr)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="33" y1="8" x2="25" y2="16" stroke="url(#iarr)" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
+```
+
+**Logo colors:**
+- Background gradient: `#0A84FF` → `#5E5CE6` (blue to indigo, diagonal)
+- Arrow gradient: `#30D158` → `#64D2FF` (green to cyan)
+- Letter: white `#FFFFFF`
+- Corner radius: 9px (at 40x40 size)
 
 ## Font Setup
 

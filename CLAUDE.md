@@ -18,3 +18,9 @@ Key rules:
 - Cards: #111426 bg, 1px #1e2235 border, 0.75rem radius
 - All borders: #1e2235
 - Focus: blue ring with 12% opacity shadow
+
+Branding:
+- `favicon.png` is the official logo — use it for favicons and app icons
+- Sidebar logo: use the SVG recreation from `README.md` (blue-to-indigo gradient rect + white "G" + green-to-cyan arrow)
+- Logo gradient: #0A84FF → #5E5CE6 (background), #30D158 → #64D2FF (arrow)
+- Corner radius on logo: 9px at 40x40
